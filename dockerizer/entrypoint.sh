@@ -9,6 +9,7 @@ echo "Gerando arquivo de variáveis de ambiente: $ENV_FILE"
 cat <<EOF > "$ENV_FILE"
 window._env_ = {
   REACT_APP_CHATWOOT_URL: "${REACT_APP_CHATWOOT_URL}",
+  REACT_APP_CHATWOOT_TOKEN: "${REACT_APP_CHATWOOT_TOKEN}",
   REACT_APP_CHATWOOT_ACCOUNT_ID: "${REACT_APP_CHATWOOT_ACCOUNT_ID}",
   REACT_APP_DEBUG: "${REACT_APP_DEBUG}"
 };
@@ -19,3 +20,7 @@ cat "$ENV_FILE"
 
 # Inicia o Nginx
 exec nginx -g "daemon off;"
+
+
+
+
